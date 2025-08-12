@@ -1,0 +1,20 @@
+[
+    {
+        "icon": "Database",
+        "title": "Data Analytics",
+        "description": "Building data pipelines, performing statistical analysis, and creating visualizations to extract meaningful insights from complex datasets.",
+        "skills": ["Python", "SQL", "Pandas", "Matplotlib", "Jupyter"]
+    },
+    {
+        "icon": "Code2",
+        "title": "Backend Development",
+        "description": "Developing robust APIs, microservices, and server-side applications with focus on performance and scalability.",
+        "skills": ["Node.js", "Python", "PostgreSQL", "REST APIs", "Docker", "Redis"]
+    },
+    {
+        "icon": "BarChart3",
+        "title": "Data Visualization",
+        "description": "Creating interactive dashboards and reports that help stakeholders make data-driven decisions.",
+        "skills": ["D3.js", "Plotly", "Looker", "Tableau", "Power BI", "React"]
+    }
+]
