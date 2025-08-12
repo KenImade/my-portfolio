@@ -1,5 +1,5 @@
 import React from "react";
-import useDashboardStore from '../../../store/dashboardStore';
+import useDashboardStore from "../../../store/dashboardStore";
 import ThemeToggle from "../../ThemeToggle";
 
 interface MobileNavProps {

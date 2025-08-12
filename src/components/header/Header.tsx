@@ -1,6 +1,6 @@
 import React from "react";
 import { BookOpen, Code2, FolderOpen, Mail, User } from 'lucide-react';
-import useDashboardStore from '../../store/dashboardStore';
+import useDashboardStore from "../../store/dashboardStore";
 import DesktopNav from "./components/DesktopNav";
 import MobileMenuButton from "./components/MobileMenuButton";
 import MobileNav from "./components/MobileNav";
