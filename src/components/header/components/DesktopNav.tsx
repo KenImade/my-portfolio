@@ -21,10 +21,10 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ navItems, currentPage, setCurre
                         className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 
                             ${
                                 currentPage === id
-                                ? 'text-blue-600 bg-blue-50'
+                                ? 'text-blue-600 bg-blue-200'
                                 : isDarkMode
                                     ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-700'
-                                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                             }`}    
                     >
                         <Icon className="h-4 w-4" />

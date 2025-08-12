@@ -11,7 +11,7 @@ const ThemeToggle: React.FC = () => {
             className={`p-2 rounded-md transition-colors duration-200 ${
                 isDarkMode
                 ? 'text-gray-300 hover:text-yellow-400 hover:bg-gray-700'
-                : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                : 'text-gray-700 hover:text-blue-600 hover:bg-50'
             }`}
             title={isDarkMode ? 'Switch to light mode': 'Switch to dark mode'}
         >

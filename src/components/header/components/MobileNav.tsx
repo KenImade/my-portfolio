@@ -25,7 +25,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
                     }}
                     className={`flex items-center space-x-3 w-full px-3 py-3 text-left rounded-md transition-colors duration-200 ${
                         currentPage === id
-                        ? 'text-blue-600 bg-blue-50'
+                        ? 'text-blue-600 bg-blue-200'
                         : isDarkMode
                             ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-700'
                             : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
