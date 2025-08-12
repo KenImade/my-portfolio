@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import RecentProjects from "../components/RecentProjects";
+import CallToAction from "../components/CallToAction";
 
 
 const HomePage: React.FC = () => {
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
             <Hero/>
             <Skills/>
             <RecentProjects/>
+            <CallToAction/>
         </div>
     )
 }
