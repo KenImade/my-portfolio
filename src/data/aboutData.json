@@ -1,0 +1,66 @@
+[
+    {
+        "year": "In Progress",
+        "title": "Software Engineering (Back-End Development) Programme",
+        "organization": "African Leadership Foundation (ALX)",
+        "type": "education"
+    },
+    {
+        "year": "2024 - Present",
+        "title": "Licensing Officer (Data Analyst)",
+        "organization": "Transport for London",
+        "location": "Hybrid, UK",
+        "description": "Automated and analyzed licensing data using Excel and VBA, improving reporting efficiency and reducing application backlog.",
+        "type": "experience"
+    },
+      {
+        "year": "Feb 2025 – Jun 2025",
+        "title": "Trainee Data Analyst",
+        "organization": "Business Full Spectrum",
+        "location": "Remote, UK",
+        "description": "Built real-time dashboards with Looker Studio and performed advanced SQL data analysis to optimize marketing strategies.",
+        "type": "experience"
+    },
+    {
+        "year": "2024",
+        "title": "Data Engineering Bootcamp",
+        "organization": "Core Data Engineers",
+        "type": "education"
+    },
+        {
+        "year": "Nov 2023 – Apr 2024",
+        "title": "Data Analyst (Volunteer)",
+        "organization": "Operational Research Society",
+        "location": "Remote, UK",
+        "description": "Cleaned and analyzed survey data using Python, delivering insights to senior leadership.",
+        "type": "experience"
+    },
+    {
+        "year": "2023",
+        "title": "MSc Business Analytics and Decision Sciences",
+        "organization": "University of Leeds",
+        "type": "education"
+    },
+    {
+        "year": "Jun 2021 – Jul 2022",
+        "title": "Data Analyst (Full-Time)",
+        "organization": "Verraki Partners",
+        "location": "Hybrid, Nigeria",
+        "description": "Developed automated data collection scripts, conducted market analysis, and ensured data accuracy within Agile teams.",
+        "type": "experience"
+    },
+    {
+        "year": "Jun 2021 – Aug 2021",
+        "title": "Machine Learning Engineer (Volunteer)",
+        "organization": "Omdena",
+        "location": "Hybrid, Nigeria",
+        "description": "Led data cleaning and ETL workflows for ML projects, mentoring teammates and collaborating across teams.",
+        "type": "experience"
+    },
+    {
+        "year": "2020",
+        "title": "Mechanical Engineering",
+        "organization": "Covenant University",
+        "type": "education"
+    }
+]

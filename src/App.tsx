@@ -5,6 +5,7 @@ import useDashboardStore from './store/dashboardStore';
 
 import HomePage from './pages/Home'
 import Header from './components/header/Header';
+import About from './pages/About';
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </main>
 
