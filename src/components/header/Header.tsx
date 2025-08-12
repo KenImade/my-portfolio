@@ -5,24 +5,31 @@ import DesktopNav from "./components/DesktopNav";
 import MobileMenuButton from "./components/MobileMenuButton";
 import MobileNav from "./components/MobileNav";
 
+
+export interface NavItem {
+  id: string;
+  label: string;
+  icon: React.ComponentType<any>;
+  path: string;
+}
+
+
 interface HeaderProps {
-    currentPage: string;
-    setCurrentPage: (page: string) => void;
     isMobileMenuOpen: boolean;
     setIsMobileMenuOpen: (open: boolean) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({
-    currentPage, setCurrentPage, isMobileMenuOpen, setIsMobileMenuOpen
+   isMobileMenuOpen, setIsMobileMenuOpen
 }) => {
     const isDarkMode = useDashboardStore(state => state.isDarkMode);
 
-    const navItems = [
-        {id: 'home', label: 'Home', icon: Code2},
-        {id: 'about', label: 'About', icon: User},
-        {id: 'projects', label: 'Projects', icon: FolderOpen},
-        {id: 'blog', label: 'Blog', icon: BookOpen},
-        {id: 'contact', label: 'Contact', icon: Mail},
+    const navItems: NavItem[] = [
+        {id: 'home', label: 'Home', icon: Code2, path: '/'},
+        {id: 'about', label: 'About', icon: User, path: '/about'},
+        {id: 'projects', label: 'Projects', icon: FolderOpen, path: '/projects'},
+        {id: 'blog', label: 'Blog', icon: BookOpen, path: '/blog'},
+        {id: 'contact', label: 'Contact', icon: Mail, path: '/contact'},
     ];
 
     return (
@@ -39,11 +46,7 @@ const Header: React.FC<HeaderProps> = ({
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        <DesktopNav 
-                            navItems={navItems}
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                        />
+                        <DesktopNav navItems={navItems}/>
                     </div>
                     
 
@@ -55,8 +58,6 @@ const Header: React.FC<HeaderProps> = ({
                 {isMobileMenuOpen && (
                     <MobileNav 
                         navItems={navItems}
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
                         setIsMobileMenuOpen={setIsMobileMenuOpen}
                     />
                 )}

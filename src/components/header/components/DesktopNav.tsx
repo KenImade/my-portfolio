@@ -1,26 +1,27 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import useDashboardStore from "../../../store/dashboardStore";
 import ThemeToggle from "../../ThemeToggle";
+import type { NavItem } from "../Header";
 
 interface DesktopNavProps {
-    navItems: {id: string; label: string; icon: React.ComponentType<any>}[];
-    currentPage: string;
-    setCurrentPage: (page: string) => void;
+    navItems: NavItem[];
 }
 
-const DesktopNav: React.FC<DesktopNavProps> = ({ navItems, currentPage, setCurrentPage}) => {
+const DesktopNav: React.FC<DesktopNavProps> = ({ navItems }) => {
     const isDarkMode = useDashboardStore(state => state.isDarkMode);
 
     return (
         <>
             <nav className="flex space-x-8">
-                {navItems.map(({id, label, icon: Icon}) => (
-                    <button
+                {navItems.map(({id, label, icon: Icon, path}) => (
+                    <NavLink
                         key={id}
-                        onClick={() => setCurrentPage(id)}
-                        className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 
+                        to={path}
+                        end
+                        className={({isActive}) => `flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 
                             ${
-                                currentPage === id
+                                isActive
                                 ? 'text-blue-600 bg-blue-200'
                                 : isDarkMode
                                     ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-700'
@@ -29,7 +30,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ navItems, currentPage, setCurre
                     >
                         <Icon className="h-4 w-4" />
                         <span>{label}</span>
-                    </button>
+                    </NavLink>
                 ))}
             </nav>
             <ThemeToggle />
