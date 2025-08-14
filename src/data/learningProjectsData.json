@@ -1,0 +1,20 @@
+[
+  {
+    "title": "SQL Query Optimizer",
+    "description": "Learning project to understand database internals",
+    "tech": ["Python", "SQLite"],
+    "status": "Learning"
+  },
+  {
+    "title": "Microservices with Docker",
+    "description": "Exploring containerization and service orchestration",
+    "tech": ["Docker", "Node.js", "Nginx"],
+    "status": "In Progress"
+  },
+  {
+    "title": "Time Series Forecasting",
+    "description": "Implementing ARIMA and LSTM models for prediction",
+    "tech": ["Python", "TensorFlow", "Pandas"],
+    "status": "Planning"
+  }
+]

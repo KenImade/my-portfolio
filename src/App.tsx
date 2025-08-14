@@ -6,6 +6,7 @@ import useDashboardStore from './store/dashboardStore';
 import HomePage from './pages/Home'
 import Header from './components/header/Header';
 import About from './pages/About';
+import Projects from './pages/Projects';
 
 
 
@@ -22,16 +23,17 @@ function App() {
   return (
     <Router>
       <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
-      <Header 
+        <Header
           isMobileMenuOpen={isMobileMenuOpen}
           setIsMobileMenuOpen={setIsMobileMenuOpen}
-      />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About/>} />
-        </Routes>
-      </main>
+        />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </main>
 
       </div>
     </Router>

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "E-commerce Analytics Dashboard",
+    "link": "/projects/#",
+    "description": "Built a comprehensive analytics dashboard for an e-commerce platform using Python and React, processing 10K+ daily transactions.",
+    "tech": ["Python", "Flask", "PostgreSQL", "React", "Chart.js"],
+    "image": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "title": "Real-time Data Pipeline",
+    "link": "/projects/#",
+    "description": "Developed a real-time data processing pipeline using Apache Kafka and Python to handle streaming data from multiple sources.",
+    "tech": ["Python", "Apache Kafka", "Docker", "MongoDB", "FastAPI"],
+    "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+]
