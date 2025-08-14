@@ -60,6 +60,7 @@ const Card: React.FC<CardProps> = (
                                 href={github}
                                 className='p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-200'
                                 title='View Source'
+                                target='_blank'
                             >
                                 <Github className='h-6 w-6' />
                             </a>
@@ -67,6 +68,7 @@ const Card: React.FC<CardProps> = (
                                 href={demo}
                                 className='p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-200'
                                 title='Live Demo'
+                                target='_blank'
                             >
                                 <ExternalLink className='h-6 w-6' />
                             </a>
