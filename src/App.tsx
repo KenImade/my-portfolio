@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Article from './components/article/Article';
 import ScrollToTop from './components/ScrollToTop';
+import Contact from './pages/Contact';
 
 
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<Article />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
 
