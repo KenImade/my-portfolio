@@ -7,7 +7,7 @@ interface IconMapperProps {
     color?: string;
 }
 
-const IconMapper: React.FC<IconMapperProps> = ({ name, size = 24, color = "currentColor" }) => {
+const IconMapper: React.FC<IconMapperProps> = ({ name, size = 24, color = "white" }) => {
     const IconComponent = (LucideIcons as any)[name];
 
     if (!IconComponent) {

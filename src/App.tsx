@@ -7,6 +7,9 @@ import HomePage from './pages/Home'
 import Header from './components/header/Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Blog from './pages/Blog';
+import Article from './components/article/Article';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -28,10 +31,13 @@ function App() {
           setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
         <main>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<Article />} />
           </Routes>
         </main>
 
