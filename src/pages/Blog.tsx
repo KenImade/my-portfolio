@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
-import blogArticles from '../data/blogArticles.json';
+import React, { useEffect, useState } from 'react'
+// import blogArticles from '../data/blogArticles.json';
 import FeaturedPost from '../components/FeaturedPost';
 import BlogCard from '../components/BlogCard';
 import SubscribeCard from '../components/SubscribeCard';
 
+import { articlesService } from '../services/articlesService';
+import type { Article } from '../services/articlesService';
+import Loading from '../components/Loading';
+
 
 const Blog: React.FC = () => {
-    const featuredPost = blogArticles.find((project) => project.featured)
+    const [articles, setArticles] = useState<Article[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            const allArticles = await articlesService.fetchAll();
+            const publishedArticles = allArticles.filter(article => !article.isDraft);
+            setArticles(publishedArticles);
+            setLoading(false);
+        };
+        fetchArticles();
+    }, []);
+
+    const featuredPost = articles.find((article) => article.featured && !article.isDraft)
 
     const categories = [
         'All',
@@ -21,8 +38,10 @@ const Blog: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     const filteredPosts =
-        selectedCategory === 'All' ? blogArticles
-            : blogArticles.filter((post) => post.category === selectedCategory);
+        selectedCategory === 'All' ? articles
+            : articles.filter((post) => post.category === selectedCategory);
+
+    if (loading) return <Loading />
 
     return (
         <div className='min-h-screen py-12'>
@@ -64,7 +83,7 @@ const Blog: React.FC = () => {
 
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                         {filteredPosts
-                            .filter((post) => !post.featured)
+                            .filter((post) => !post.isDraft)
                             .map((post, index) => (
                                 <BlogCard
                                     key={index}
@@ -76,6 +95,9 @@ const Blog: React.FC = () => {
                                     tags={post.tags}
                                     date={post.date}
                                     readTime={post.readTime}
+                                    isDraft={false}
+                                    buttonLabel='Read'
+                                    link={`/blog/${post.id}`}
                                 />
                             ))}
                     </div>

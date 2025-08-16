@@ -8,10 +8,10 @@ import CallToAction from "../components/CallToAction";
 const HomePage: React.FC = () => {
     return (
         <div className="min-h-screen">
-            <Hero/>
-            <Skills/>
-            <RecentProjects/>
-            <CallToAction/>
+            <Hero />
+            <Skills />
+            <RecentProjects />
+            <CallToAction />
         </div>
     )
 }

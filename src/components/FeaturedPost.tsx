@@ -29,7 +29,7 @@ const FeaturedPost: React.FC<FeaturedPostProps> = ({ category, title, excerpt, d
           <div className='flex items-center space-x-2'>
             <Calendar className='h-4 w-4' />
             <span className='text-sm'>
-              {new Date(date).toLocaleDateString()}
+              {date}
             </span>
           </div>
           <div className='flex items-center space-x-2'>

@@ -26,7 +26,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ icon, category, title, da
             <div className='flex items-center space-x-6 text-gray-500 dark:text-gray-400'>
                 <div className='flex items-center space-x-2'>
                     <Calendar className='h-4 w-4' />
-                    <span>{new Date(date).toLocaleDateString()}</span>
+                    <span>{date}</span>
                 </div>
                 <div className='flex items-center space-x-2'>
                     <Clock className='h-4 w-4' />

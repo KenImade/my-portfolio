@@ -78,7 +78,7 @@ const NotFoundPage: React.FC = () => {
                             </div>
 
                             <h1 className={`text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                                Page Not Found
+                                Resource Not Found
                             </h1>
                             <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                 The requested endpoint returned null results

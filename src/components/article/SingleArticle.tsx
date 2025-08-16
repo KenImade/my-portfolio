@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link, useParams } from 'react-router-dom';
-import blogArticles from '../../data/blogArticles.json';
 import { ArrowLeft } from 'lucide-react';
 import ArticleHeader from './components/ArticleHeader';
 import ArticleContent from './components/ArticleContent';
 import ArticleNav from './components/ArticleNav';
 import ArticleSidebar from './components/ArticleSidebar';
 import ShareButton from '../ShareButton';
+import Loading from '../Loading';
+
+import { articlesService } from '../../services/articlesService';
+import type { Article } from '../../services/articlesService';
+import NotFoundPage from '../../pages/NotFoundPage';
 
 
-const Article: React.FC = () => {
+
+const SingleArticle: React.FC = () => {
     const { id } = useParams<{ id: string }>();
 
-    const article = blogArticles.find((item) => item.id === id)
+    const [articles, setArticles] = useState<Article[] | null>([]);
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        const fetchArticles = async () => {
+            const fetched = await articlesService.fetchAll();
+            setArticles(fetched);
+            setLoading(false);
+        };
+        fetchArticles();
+    }, [id])
 
+    const allArticles = articles?.filter(a => !a.isDraft) ?? [];
+    const currentIndex = allArticles.findIndex(a => a.id === id);
+    const article = allArticles[currentIndex] || null;
+    const previousPost = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
+    const nextPost = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
+
+    if (loading) return <Loading />;
     if (!article) {
-        // TODO: change this to custom 404 page
-        return <div className='text-center py-12'>Article not found</div>
+        return <NotFoundPage />
     }
-
-    const currentIndex = blogArticles.findIndex((post) => post.id === article.id);
-    const previousPost = currentIndex > 0 ? blogArticles[currentIndex - 1] : null;
-    const nextPost = currentIndex < blogArticles.length - 1 ? blogArticles[currentIndex + 1] : null;
 
     const getHeadings = (markdown: string) => {
         const regex = /^##\s+(.*)$/gm;
@@ -35,6 +51,8 @@ const Article: React.FC = () => {
     };
 
     const headings = getHeadings(article.content);
+
+    console.log(article)
 
     return (
         <div className='min-h-screen py-12'>
@@ -61,8 +79,8 @@ const Article: React.FC = () => {
                     <ArticleContent content={article.content} />
 
                     <ArticleNav
-                        previousPost={previousPost ? { id: previousPost.id, title: previousPost.title } : null}
-                        nextPost={nextPost ? { id: nextPost.id, title: nextPost.title } : null}
+                        previousPost={previousPost ? { id: previousPost.id, title: previousPost.title, isDraft: previousPost.isDraft } : null}
+                        nextPost={nextPost ? { id: nextPost.id, title: nextPost.title, isDraft: nextPost.isDraft } : null}
                     />
 
                 </article>
@@ -80,4 +98,4 @@ const Article: React.FC = () => {
     )
 }
 
-export default Article
+export default SingleArticle;

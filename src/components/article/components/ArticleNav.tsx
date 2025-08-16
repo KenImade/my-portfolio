@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface ArticleNavProps {
-    previousPost: { id: string; title: string } | null;
-    nextPost: { id: string; title: string } | null;
+    previousPost: { id: string; title: string; isDraft: boolean; } | null;
+    nextPost: { id: string; title: string; isDraft: boolean; } | null;
 }
 
 const ArticleNav: React.FC<ArticleNavProps> = ({ previousPost, nextPost }) => {
     return (
         <nav className='mt-12 pt-8 border-t border-gray-200 dark:border-gray-700'>
             <div className='flex justify-between items-center'>
-                {previousPost ? (
+                {previousPost && !previousPost.isDraft ? (
                     <Link
                         to={`/blog/${previousPost.id}`}
                         className="flex items-center space-x-3 text-left group dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
@@ -25,7 +25,7 @@ const ArticleNav: React.FC<ArticleNavProps> = ({ previousPost, nextPost }) => {
                 ) : (<div></div>)}
 
 
-                {nextPost ? (
+                {nextPost && !nextPost.isDraft ? (
                     <Link
                         to={`/blog/${nextPost.id}`}
                         className="flex items-center space-x-3 text-left group dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"

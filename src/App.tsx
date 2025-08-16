@@ -8,9 +8,12 @@ import Header from './components/header/Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
-import Article from './components/article/Article';
+import SingleArticle from './components/article/SingleArticle';
 import ScrollToTop from './components/ScrollToTop';
 import Contact from './pages/Contact';
+import Drafts from './pages/Drafts';
+import Editor from './components/editor/Editor';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 
@@ -26,7 +29,7 @@ function App() {
 
   return (
     <Router>
-      <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
+      <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-blue-100 via-blue-50 to-gray-100'}`}>
         <Header
           isMobileMenuOpen={isMobileMenuOpen}
           setIsMobileMenuOpen={setIsMobileMenuOpen}
@@ -38,8 +41,12 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<Article />} />
+            <Route path="/blog/:id" element={<SingleArticle />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/drafts" element={<Drafts />} />
+            <Route path="/editor" element={<Editor />} />
+            <Route path="/editor/:id" element={<Editor />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 
