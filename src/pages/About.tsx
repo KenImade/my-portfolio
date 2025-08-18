@@ -21,14 +21,13 @@ const About: React.FC = () => {
                         <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
                             {/* TODO: update narrative */}
                             <p>
-                                My fascination with data began during my Computer Science studies when I discovered how
+                                My fascination with data began during my undergraduate internship when I discovered how
                                 raw numbers could tell compelling stories and drive important decisions. What started as
                                 curiosity quickly became a passion for building systems that transform data into actionable insights.
                             </p>
                             <p>
-                                As a recent graduate, I've been focusing on developing my skills in data analytics and
-                                backend development through personal projects, online courses, and contributing to open-source
-                                initiatives. I believe in learning by doing and constantly challenging myself with new technologies.
+                                I've been focusing on developing my skills in data analytics and
+                                backend development through personal projects, online courses, and volunteering. I believe in learning by doing and constantly challenging myself with new technologies.
                             </p>
                             <p>
                                 I'm particularly drawn to the intersection of data science and software engineering, where

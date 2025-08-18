@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BookOpen } from "lucide-react";
 
 const SubscribeCard: React.FC = () => {
+    const [submitted, setSubmitted] = useState(false);
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        if (submitted) {
+            const timer = setTimeout(() => setSubmitted(false), 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [submitted]);
+
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        if (!validateEmail(email)) {
+            e.preventDefault();
+            setError("Please enter a valid email address");
+            return;
+        }
+
+        setError("");
+        setSubmitted(true);
+        setEmail("");
+    }
+
     return (
         <div className="mt-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center">
             <BookOpen className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -11,18 +38,40 @@ const SubscribeCard: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
                 I'm constantly learning and working on new projects. Subscribe to get
                 notified when I publish new posts about data analytics, backend
-                development, and my journey as a junior developer.
+                development, and my journey as a developer.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
-                />
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
-                    Subscribe
-                </button>
-            </div>
+            {!submitted ? (
+                <form
+                    name="subscribe"
+                    method="POST"
+                    data-netlify="true"
+                    onSubmit={handleSubmit}
+                    className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+                >
+                    <input type="hidden" name="form-name" value="subscribe" />
+                    <input
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email"
+                        required
+                        className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                    />
+                    <button
+                        type="submit"
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+                    >
+                        Subscribe
+                    </button>
+                </form>
+            ) : (
+                <p className="mt-4 text-green-600 font-medium">
+                    🎉 Thanks for subscribing! You'll hear from me soon.
+                </p>
+            )}
+
+            {error && <p className="mt-2 text-red-500 text-sm">{error}</p>}
         </div>
     );
 };

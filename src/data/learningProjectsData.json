@@ -1,20 +1,14 @@
 [
   {
-    "title": "SQL Query Optimizer",
-    "description": "Learning project to understand database internals",
-    "tech": ["Python", "SQLite"],
+    "title": "FastAPI",
+    "description": "Reading the documentation to learn how to build reliable production grade APIs",
+    "tech": ["Python", "FastAPI"],
     "status": "Learning"
   },
   {
-    "title": "Microservices with Docker",
-    "description": "Exploring containerization and service orchestration",
-    "tech": ["Docker", "Node.js", "Nginx"],
+    "title": "Bank API with ML for Fraud Detection",
+    "description": "Exploring building APIs",
+    "tech": ["Python", "FastAPI", "Docker", "Traefik"],
     "status": "In Progress"
-  },
-  {
-    "title": "Time Series Forecasting",
-    "description": "Implementing ARIMA and LSTM models for prediction",
-    "tech": ["Python", "TensorFlow", "Pandas"],
-    "status": "Planning"
   }
 ]

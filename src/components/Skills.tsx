@@ -5,9 +5,9 @@ import IconMapper from './IconMapper';
 
 const Skills: React.FC = () => {
     return (
-        <section className="py-20 bg-gray-200 dark:bg-gray-800">
-            <div className="max-w-6xl mx-auto px-6">
-                <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">What I Do</h2>
+        <section className="py-2 dark:bg-gray-800">
+            <div className="max-w-6xl mx-auto px-6 ">
+                <h2 className="text-3xl font-bold text-center text-gray-900  dark:text-white mb-16">What I Do</h2>
                 <div className="grid md:grid-col-3 gap-8">
                     {
                         skillsData.map((item, index) => {

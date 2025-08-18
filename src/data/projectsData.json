@@ -1,12 +1,35 @@
 [
   {
-    "id": "ecommerce-analytics-dashboard",
-    "title": "E-commerce Analytics Dashboard",
+    "id": "bank-api-with-ml-for-fraud-detection",
+    "title": "Bank API with ML for Fraud Detection",
+    "category": "Machine Learning",
+    "description": "Machine learning powered banking system which identified fraudulent transactions.",
+    "longDescription": "Building a banking API with FastAPI with a machine learning transaction analysis and fraud detectino system.",
+    "technologies": ["Python", "FastAPI", "Docker", "Celery", "MLFlow", "Pandas", "PostgreSQL", "Traefik", "Scikit-learn"],
+    "icon": "Banknote",
+    "image": "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "features": [
+      "Core Banking Functionality: Account creation, transfers, deposits, withdrawals, statements",
+      "Virtal Card Management: Card creation, activation, blocking, and top-ups",
+      "User Management: Profiles, Next of Kin informatin, KYC implementation",
+      "AI/ML-Powered Fraud Detection: ML-based transactin analysis and fraud detection",
+      "Background Processing: Email notifications, PDF generation, and ML training",
+      "Advanced Deployment: Container orchestratino, reverse proxying, and high availability",
+      "ML Ops: Model training, evaluation, deployment, and monitoring"
+    ],
+    "challenges": "Learning how to build a full production level fintech solution.",
+    "github": "https://github.com/KenImade/bank-api-with-ml-for-fraud-detection",
+    "demo": "#",
+    "status": "In Progress"
+  },
+  {
+    "id": "real-estate-dashboard",
+    "title": "Real Estate Dashboard",
     "category": "Data Analytics",
-    "description": "A comprehensive analytics dashboard for an e-commerce platform that processes and visualizes sales data, customer behavior, and inventory metrics in real-time.",
-    "longDescription": "Built during my internship, this dashboard helps business stakeholders make data-driven decisions by providing insights into sales trends, customer segmentation, and product performance. The system processes over 10,000 daily transactions and generates automated reports.",
-    "technologies": ["Python", "Flask", "PostgreSQL", "React", "Chart.js", "Pandas", "Docker"],
-    "icon": "ShoppingCart",
+    "description": "Built a comprehensive analytics dashboard to identify trends in the UK Real Estate Market.",
+    "longDescription": "End-to-End Data Engineering project to develop a dashboard which showcases various metrics around the price paid data for various land and property transactions in England and Wales.",
+    "technologies": ["Python", "Terraform", "dbt", "Looker", "BigQuery"],
+    "icon": "Building",
     "image": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     "features": [
       "Real-time sales and revenue tracking",
@@ -17,96 +40,8 @@
       "Export functionality for stakeholders"
     ],
     "challenges": "Handling large datasets efficiently, creating responsive visualizations, and ensuring data accuracy across multiple sources.",
-    "github": "https://github.com",
-    "demo": "https://demo.com",
-    "status": "Completed"
-  },
-  {
-    "id": "realtime-data-pipeline",
-    "title": "Real-time Data Pipeline",
-    "category": "Backend Development",
-    "description": "A scalable data processing pipeline that ingests streaming data from multiple sources, processes it in real-time, and stores it for analytics and reporting.",
-    "longDescription": "This project demonstrates my understanding of distributed systems and real-time data processing. The pipeline can handle thousands of events per second and includes error handling, data validation, and monitoring capabilities.",
-    "technologies": ["Python", "Apache Kafka", "Docker", "MongoDB", "FastAPI", "Redis", "Prometheus"],
-    "icon": "Zap",
-    "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "features": [
-      "Multi-source data ingestion (APIs, files, databases)",
-      "Real-time stream processing with Kafka",
-      "Data validation and cleansing",
-      "Scalable microservices architecture",
-      "Monitoring and alerting system",
-      "RESTful API for data access"
-    ],
-    "challenges": "Ensuring data consistency, handling backpressure, and implementing proper error recovery mechanisms.",
-    "github": "https://github.com",
-    "demo": "https://demo.com",
-    "status": "Completed"
-  },
-  {
-    "id": "student-performance-analytics",
-    "title": "Student Performance Analytics",
-    "category": "Data Science",
-    "description": "A machine learning project that analyzes student performance data to identify at-risk students and recommend interventions to improve academic outcomes.",
-    "longDescription": "This academic project combines data analysis with predictive modeling to help educational institutions identify students who might need additional support. The model achieved 85% accuracy in predicting student outcomes.",
-    "technologies": ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter", "Seaborn", "SQLite"],
-    "icon": "TrendingUp",
-    "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "features": [
-      "Exploratory data analysis of student records",
-      "Feature engineering and selection",
-      "Multiple ML models (Random Forest, SVM, Logistic Regression)",
-      "Model evaluation and comparison",
-      "Interactive visualizations",
-      "Actionable insights and recommendations"
-    ],
-    "challenges": "Dealing with missing data, feature selection, and avoiding overfitting while maintaining model interpretability.",
-    "github": "https://github.com",
-    "demo": "https://demo.com",
-    "status": "Completed"
-  },
-  {
-    "id": "api-performance-monitor",
-    "title": "API Performance Monitor",
-    "category": "Backend Development",
-    "description": "A monitoring system that tracks API performance metrics, detects anomalies, and provides alerts for potential issues in real-time.",
-    "longDescription": "Built to solve the problem of API reliability monitoring, this system provides comprehensive insights into API health, response times, error rates, and usage patterns. It includes a dashboard for DevOps teams.",
-    "technologies": ["Node.js", "Express", "PostgreSQL", "React", "WebSockets", "Docker", "Grafana"],
-    "icon": "BarChart3",
-    "image": "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "features": [
-      "Real-time API health monitoring",
-      "Response time and error rate tracking",
-      "Automated alerting system",
-      "Historical performance analysis",
-      "Custom dashboard with live updates",
-      "Integration with popular notification services"
-    ],
-    "challenges": "Handling high-frequency monitoring data, creating efficient alerting rules, and building responsive real-time dashboards.",
-    "github": "https://github.com",
-    "demo": "https://demo.com",
-    "status": "In Progress"
-  },
-  {
-    "id": "weather-data-aggregator",
-    "title": "Weather Data Aggregator",
-    "category": "Data Engineering",
-    "description": "A system that collects weather data from multiple APIs, processes and stores it efficiently, and provides a unified interface for weather analytics.",
-    "longDescription": "This project showcases data integration skills by combining multiple weather data sources into a single, reliable system. It includes data quality checks, historical data storage, and trend analysis capabilities.",
-    "technologies": ["Python", "FastAPI", "PostgreSQL", "Celery", "Redis", "Docker", "Plotly"],
-    "icon": "Globe",
-    "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "features": [
-      "Multi-source weather data collection",
-      "Data validation and quality checks",
-      "Historical data storage and indexing",
-      "RESTful API for data access",
-      "Weather trend analysis",
-      "Interactive weather visualizations"
-    ],
-    "challenges": "Handling API rate limits, ensuring data consistency across sources, and optimizing database queries for time-series data.",
-    "github": "https://github.com",
-    "demo": "https://demo.com",
+    "github": "https://github.com/KenImade/real_estate_dashboard",
+    "demo": "https://lookerstudio.google.com/u/0/reporting/0cce3cd0-a312-49ee-b4e9-5439192078ec/page/n2vyD",
     "status": "Completed"
   }
 ]

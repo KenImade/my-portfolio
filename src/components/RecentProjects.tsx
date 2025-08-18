@@ -4,8 +4,6 @@ import projectsData from '../data/recentProjectsData.json';
 
 const RecentProjects: React.FC = () => {
     return (
-        // TODO: will later make this dynamic by fetching recent data from firebase
-        // implementation: try and get data from firebase if error revert to projects data json file console log if error
         <section className="py-20 bg-gray-50 dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-12">

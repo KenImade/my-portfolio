@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                     <div className="mb-8">
                         {/* #TODO: change picture later */}
                         <img
-                            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+                            src="/images/profile_picture.jpeg"
                             alt="Kenneth Imade"
                             className="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"
                         />
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                        <Link 
+                        <Link
                             to="/projects"
                             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2 group"
                         >
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                     className="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-200"
                     title="GitHub"
                 >
-                    <Github className="h-6 w-6"/>
+                    <Github className="h-6 w-6" />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/kenneth-imade/"
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
                     className="text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors duration-200"
                     title="LinkedIn"
                 >
-                    <Linkedin className="h-6 w-6"/>
+                    <Linkedin className="h-6 w-6" />
                 </a>
             </div>
         </section>

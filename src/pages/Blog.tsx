@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import blogArticles from '../data/blogArticles.json';
 import FeaturedPost from '../components/FeaturedPost';
 import BlogCard from '../components/BlogCard';
 import SubscribeCard from '../components/SubscribeCard';
@@ -48,7 +47,7 @@ const Blog: React.FC = () => {
             <div className='max-w-6xl mx-auto px-6'>
                 <div className='text-center mb-16'>
                     <h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>My Blog</h1>
-                    <p className='text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto'>
+                    <p className='text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6'>
                         Sharing my learning journey, technical insights, and experiences as a developer
                         in data analytics and backend development
                     </p>

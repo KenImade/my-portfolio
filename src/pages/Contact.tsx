@@ -27,25 +27,35 @@ const Contact: React.FC = () => {
         });
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({
-                name: '',
-                email: '',
-                company: '',
-                subject: '',
-                message: ''
+        try {
+            const form = e.currentTarget;
+            const data = new FormData(form);
+
+            await fetch("/", {
+                method: "POST",
+                body: data,
             });
 
-            // Reset success message after 5 seconds
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }, 1500);
+            setIsSubmitting(false);
+            setSubmitStatus("success");
+            setFormData({
+                name: "",
+                email: "",
+                company: "",
+                subject: "",
+                message: ""
+            });
+
+            setTimeout(() => setSubmitStatus("idle"), 5000);
+        } catch (error) {
+            setIsSubmitting(false);
+            setSubmitStatus("error");
+            console.error("Error submitting form:", error);
+        }
     };
 
     return (
