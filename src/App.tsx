@@ -14,6 +14,8 @@ import Contact from './pages/Contact';
 import Drafts from './pages/Drafts';
 import Editor from './components/editor/Editor';
 import NotFoundPage from './pages/NotFoundPage';
+import ProtectedRoute from './components/ProtectedRoute';
+import PasswordProtector from './pages/PasswordProtector';
 
 
 
@@ -43,13 +45,26 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<SingleArticle />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/drafts" element={<Drafts />} />
-            <Route path="/editor" element={<Editor />} />
-            <Route path="/editor/:id" element={<Editor />} />
+            <Route
+              path="/drafts"
+              element={
+                <ProtectedRoute>
+                  <Drafts />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/editor/:id?"
+              element={
+                <ProtectedRoute>
+                  <Editor />
+                </ProtectedRoute>
+              }
+            />
+            <Route path='/auth' element={<PasswordProtector />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
-
       </div>
     </Router>
   );
