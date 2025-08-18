@@ -30,7 +30,7 @@ const EditorHeader: React.FC<EditorHeaderProps> = ({
             <div className="flex flex-wrap items-center gap-3">
                 <button
                     onClick={() => setShowPreview(!showPreview)}
-                    className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                    className="flex items-center gap-2 px-4 py-2 border text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                 >
                     {showPreview ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                     <span>{showPreview ? 'Hide Preview' : 'Show Preview'}</span>
