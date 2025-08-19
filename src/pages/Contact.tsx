@@ -5,6 +5,7 @@ import LookingForCard from '../components/contact/LookingForCard';
 import QuickResponseNote from '../components/contact/QuickResponseNote';
 import ContactForm from '../components/contact/ContactForm';
 import WhyWorkWithMe from '../components/contact/WhyWorkWithMe';
+import SEOHead from '../components/SEOHead';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -60,6 +61,11 @@ const Contact: React.FC = () => {
 
     return (
         <div className="min-h-screen py-12">
+            <SEOHead
+                title='contact'
+                description='Contact Kenneth Imade for your projects, job opportunities, open source contribution or anything else.'
+                url='https://kennethimade.dev/contact'
+            />
             <div className="max-w-6xl mx-auto px-6">
                 <ContactHeader />
 

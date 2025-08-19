@@ -2,10 +2,16 @@ import React from 'react'
 import projectsData from '../data/projectsData.json';
 import learningProjectsData from '../data/learningProjectsData.json'
 import Card from '../components/Card';
+import SEOHead from '../components/SEOHead';
 
 const Projects: React.FC = () => {
     return (
         <div className='min-h-screen py-12'>
+            <SEOHead
+                title="Projects"
+                description="Explore projects by Kenneth Imade in data analytics and backend development."
+                url="https://kennethimade.dev/projects"
+            />
             <div className='max-w-6xl mx-auto px-6'>
                 <div className='text-center mb-16'>
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">My Projects</h1>

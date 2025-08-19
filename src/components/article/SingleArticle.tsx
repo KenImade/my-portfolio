@@ -13,6 +13,7 @@ import { articlesService } from '../../services/articlesService';
 import type { Article } from '../../services/articlesService';
 import NotFoundPage from '../../pages/NotFoundPage';
 
+import SEOHead from '../SEOHead';
 
 
 const SingleArticle: React.FC = () => {
@@ -52,10 +53,21 @@ const SingleArticle: React.FC = () => {
 
     const headings = getHeadings(article.content);
 
-    console.log(article)
-
     return (
         <div className='min-h-screen py-12'>
+            <SEOHead
+                type='article'
+                title={article.title}
+                description={article.excerpt || article.content.slice(0, 160)}
+                url={`https://kennethimade.dev/blog/${article.id}`}
+                article={{
+                    publishedTime: article.date,
+                    modifiedTime: article.date,
+                    author: "Kenneth Imade",
+                    section: article.category,
+                    tags: article.tags
+                }}
+            />
             <div className='max-w-6xl mx-auto px-6 flex gap-8'>
                 <article className='flex-1 max-w-4xl'>
 

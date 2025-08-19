@@ -6,6 +6,7 @@ import SubscribeCard from '../components/SubscribeCard';
 import { articlesService } from '../services/articlesService';
 import type { Article } from '../services/articlesService';
 import Loading from '../components/Loading';
+import SEOHead from '../components/SEOHead';
 
 
 const Blog: React.FC = () => {
@@ -44,6 +45,11 @@ const Blog: React.FC = () => {
 
     return (
         <div className='min-h-screen py-12'>
+            <SEOHead
+                title='blog'
+                description='Explore articles by Kenneth Imade in data analytics and backend development.'
+                url='https://kennethimade.dev/blog'
+            />
             <div className='max-w-6xl mx-auto px-6'>
                 <div className='text-center mb-16'>
                     <h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>My Blog</h1>

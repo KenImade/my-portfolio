@@ -1,10 +1,16 @@
 import React from 'react';
 import { GraduationCap, MapPin, Calendar, Code2, Database, BarChart3, Target, Users, Lightbulb } from 'lucide-react';
 import aboutData from '../data/aboutData.json';
+import SEOHead from '../components/SEOHead';
 
 const About: React.FC = () => {
     return (
         <div className="min-h-screen py-12">
+            <SEOHead
+                title='About'
+                description='Get to know Kenneth Imade. His career and education.'
+                url='https://kennethimade.dev/about'
+            />
             <div className="max-w-6xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">

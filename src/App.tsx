@@ -37,6 +37,7 @@ function App() {
           setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
         <main>
+          {/* TODO: fix mobile nav link functionality, add SEO */}
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
