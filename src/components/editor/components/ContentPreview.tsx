@@ -2,6 +2,7 @@ import React from 'react'
 import type { FormData } from '../Editor';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import type { CodeProps } from '../../article/components/ArticleContent';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -19,7 +20,7 @@ const ContentPreview: React.FC<ContentPreviewProps> = ({ formData }) => {
             <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                    code({ node, inline, className, children, ...props }) {
+                    code({ inline, className, children, ...props }: CodeProps) {
                         const match = /language-(\w+)/.exec(className || '');
                         const codeString = String(children).replace(/\n$/, '')
 

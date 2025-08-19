@@ -1,4 +1,19 @@
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { Mail, MapPin, Linkedin, Github } from 'lucide-react';
+
+
+interface InfoItemProps {
+    icon: ReactNode;
+    label: string;
+    value: string;
+}
+
+interface SocialLinkProps {
+    href: string;
+    icon: ReactNode;
+    bgColor?: string;
+    hover?: string;
+}
 
 const ContactInfoCard = () => (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
@@ -19,7 +34,7 @@ const ContactInfoCard = () => (
     </div>
 );
 
-const InfoItem = ({ icon, label, value }) => (
+const InfoItem: React.FC<InfoItemProps> = ({ icon, label, value }) => (
     <div className="flex items-center space-x-4">
         <div className="bg-blue-50 p-3 rounded-lg">{icon}</div>
         <div>
@@ -29,7 +44,7 @@ const InfoItem = ({ icon, label, value }) => (
     </div>
 );
 
-const SocialLink = ({ href, icon, bgColor, hover }) => (
+const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, bgColor, hover }) => (
     <a
         href={href}
         target='_blank'

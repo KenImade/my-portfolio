@@ -1,4 +1,11 @@
+import type { ReactNode } from 'react';
 import { Coffee, MessageSquare, Calendar } from 'lucide-react';
+
+interface CardProps {
+    icon: ReactNode;
+    title: string;
+    desc: string;
+}
 
 const WhyWorkWithMe = () => (
     <div className="mt-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
@@ -11,7 +18,7 @@ const WhyWorkWithMe = () => (
     </div>
 );
 
-const Card = ({ icon, title, desc }) => (
+const Card: React.FC<CardProps> = ({ icon, title, desc }) => (
     <div className="text-center">
         <div className="bg-blue-200 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
             {icon}

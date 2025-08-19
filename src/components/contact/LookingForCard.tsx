@@ -1,4 +1,11 @@
+import type { ReactNode } from 'react';
 import { Coffee, MessageSquare, Calendar } from 'lucide-react';
+
+interface ListItemProps {
+    icon: ReactNode;
+    title: string;
+    desc: string;
+}
 
 const LookingForCard = () => (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
@@ -9,7 +16,7 @@ const LookingForCard = () => (
     </div>
 );
 
-const ListItem = ({ icon, title, desc }) => (
+const ListItem: React.FC<ListItemProps> = ({ icon, title, desc }) => (
     <div className="flex items-start space-x-3 mb-4">
         {icon}
         <div>
