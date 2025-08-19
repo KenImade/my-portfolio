@@ -27,7 +27,7 @@ const ContentPreview: React.FC<ContentPreviewProps> = ({ formData }) => {
                         return !inline && match ? (
                             <SyntaxHighlighter
                                 style={oneDark}
-                                langugae={match[1]}
+                                language={match[1]}
                                 PreTag="div"
                                 className="rounded-lg"
                                 {...props}
