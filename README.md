@@ -11,12 +11,14 @@ A modern, responsive portfolio website built with React, TypeScript, and Firebas
 ## ✨ Features
 
 ### 🎨 **Modern Design**
+
 - **Responsive Design** - Optimized for all devices (mobile, tablet, desktop)
 - **Dark/Light Theme** - Automatic theme switching based on time of day
 - **Smooth Animations** - Micro-interactions and hover effects
 - **Professional Typography** - Clean, readable fonts with proper hierarchy
 
 ### 📝 **Dynamic Blog System**
+
 - **Full CRUD Operations** - Create, read, update, delete articles
 - **Draft Management** - Save articles as drafts before publishing
 - **Markdown Support** - Rich text editing with live preview
@@ -25,12 +27,14 @@ A modern, responsive portfolio website built with React, TypeScript, and Firebas
 - **Featured Posts** - Highlight important articles
 
 ### 🔐 **Admin Features**
+
 - **Password Protection** - Secure article editor access
 - **Real-time Preview** - See changes as you type
 - **Firebase Integration** - Cloud-based content management
 - **SEO Optimization** - Proper meta tags and structure
 
 ### 🎯 **Portfolio Sections**
+
 - **Home** - Professional introduction and skills overview
 - **About** - Detailed background and experience
 - **Projects** - Showcase of development work with live demos
@@ -38,6 +42,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Firebas
 - **Contact** - Professional contact form and information
 
 ### 🛠 **Technical Features**
+
 - **TypeScript** - Type safety and better development experience
 - **Firebase Backend** - Scalable cloud database and authentication
 - **Custom 404 Page** - Themed error page with analytics visualization
@@ -47,6 +52,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Firebas
 ## 🛠 Tech Stack
 
 ### **Frontend**
+
 - **React 18.3.1** - Modern UI framework with hooks
 - **TypeScript** - Type safety and enhanced development
 - **Vite 5.4.2** - Fast build tool and development server
@@ -54,19 +60,23 @@ A modern, responsive portfolio website built with React, TypeScript, and Firebas
 - **Lucide React** - Beautiful, customizable icons
 
 ### **Content Management**
+
 - **React Markdown** - Markdown rendering for blog posts
 - **React Syntax Highlighter** - Code syntax highlighting
 - **Remark GFM** - GitHub Flavored Markdown support
 
 ### **Backend & Database**
+
 - **Firebase 12.1.0** - Backend-as-a-Service
   - **Firestore** - NoSQL database for articles and drafts
 
 ### **State Management**
+
 - **Zustand 5.0.7** - Lightweight state management
 - **Custom Hooks** - Reusable logic for data fetching
 
 ### **Development Tools**
+
 - **ESLint** - Code linting and quality assurance
 - **PostCSS** - CSS processing and optimization
 - **TypeScript ESLint** - TypeScript-specific linting rules
@@ -116,12 +126,14 @@ src/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/portfolio.git
    cd portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -133,11 +145,13 @@ src/
    - Copy your Firebase configuration
 
 4. **Configure environment variables**
+
    ```bash
    cp .env.example .env
    ```
-   
+
    Update `.env` with your Firebase credentials:
+
    ```env
    VITE_FIREBASE_API_KEY=your-api-key
    VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
@@ -148,6 +162,7 @@ src/
    ```
 
 5. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -160,13 +175,16 @@ src/
 ### Adding Blog Articles
 
 #### Method 1: Using the Web Interface
+
 1. Navigate to `/editor` (password: `as set in your env file`)
 2. Fill in article details
 3. Write content using Markdown
 4. Save as draft or publish immediately
 
 #### Method 2: Direct Firebase
+
 Articles are stored in Firestore with this structure:
+
 ```javascript
 {
   title: "Article Title",
@@ -184,6 +202,7 @@ Articles are stored in Firestore with this structure:
 ### Updating Projects
 
 Edit `src/data/projects.json` to add or modify project information:
+
 ```json
 {
   "id": "project-id",
@@ -203,18 +222,23 @@ Edit `src/data/projects.json` to add or modify project information:
 ## 🎨 Customization
 
 ### Themes
+
 The site supports automatic dark/light theme switching:
+
 - **Light Mode**: 6 AM - 6 PM
 - **Dark Mode**: 6 PM - 6 AM
 - Manual toggle available in header
 
 ### Colors
+
 Primary color scheme uses Tailwind CSS classes:
+
 - **Primary**: Blue (blue-600, blue-700)
 - **Secondary**: Purple (purple-600, purple-700)
 - **Accent**: Various colors for categories
 
 ### Typography
+
 - **Headings**: System font stack with fallbacks
 - **Body**: Optimized for readability
 - **Code**: Monospace font for code blocks
@@ -222,6 +246,7 @@ Primary color scheme uses Tailwind CSS classes:
 ## 🚀 Deployment
 
 ### Option 1: Netlify (Recommended)
+
 1. Connect your GitHub repository to Netlify
 2. Set build command: `npm run build`
 3. Set publish directory: `dist`
@@ -229,12 +254,14 @@ Primary color scheme uses Tailwind CSS classes:
 5. Deploy automatically on push to main branch
 
 ### Option 2: Vercel
+
 1. Import project from GitHub
 2. Configure build settings (auto-detected)
 3. Add environment variables
 4. Deploy with automatic CI/CD
 
 ### Option 3: Firebase Hosting
+
 ```bash
 npm install -g firebase-tools
 firebase login
@@ -244,7 +271,9 @@ firebase deploy
 ```
 
 ### Option 4: GitHub Pages
+
 Add this workflow to `.github/workflows/deploy.yml`:
+
 ```yaml
 name: Deploy to GitHub Pages
 on:
@@ -308,7 +337,7 @@ npm run list-articles # List all articles
 
 **Kenneth Imade** - Software Engineer
 
-- **Email**: kenimade91@gmail.com
+- **Email**: <kenimade91@gmail.com>
 - **LinkedIn**: [linkedin.com/in/kenneth-imade](https://linkedin.com/in/kenneth-imade)
 - **GitHub**: [github.com/KenImade](https://github.com/KenImade)
 - **Portfolio**: [kennethimade.dev](https://kennethimade.dev/)
