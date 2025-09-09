@@ -54,7 +54,7 @@ const ArticleContent: React.FC<ArticleContentProps> = ({ content }) => {
 
                         if (!inline && match) {
                             return (
-                                <div className="relative group">
+                                <div className="relative group w-full overflow-x-auto rounded-lg">
                                     <button
                                         onClick={() => copyToClipboard(codeString, codeId)}
                                         className="absolute top-3 right-3 p-2 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"

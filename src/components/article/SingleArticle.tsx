@@ -67,8 +67,8 @@ const SingleArticle: React.FC = () => {
                     section: article.category,
                     tags: article.tags
                 }}
-            />
-            <div className='max-w-6xl mx-auto px-6 flex gap-8'>
+            />m
+            <div className='max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-8'>
                 <article className='flex-1 max-w-4xl'>
 
                     <Link
