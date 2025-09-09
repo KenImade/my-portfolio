@@ -19,8 +19,8 @@
     ],
     "challenges": "Learning how to build a full production level fintech solution.",
     "github": "https://github.com/KenImade/bank-api-with-ml-for-fraud-detection",
-    "demo": "#",
-    "status": "In Progress"
+    "demo": "https://github.com/KenImade/bank-api-with-ml-for-fraud-detection",
+    "status": "Completed"
   },
   {
     "id": "real-estate-dashboard",
@@ -32,12 +32,8 @@
     "icon": "Building",
     "image": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     "features": [
-      "Real-time sales and revenue tracking",
-      "Customer behavior analysis and segmentation",
-      "Inventory management insights",
       "Automated daily/weekly/monthly reports",
-      "Interactive charts and visualizations",
-      "Export functionality for stakeholders"
+      "Interactive charts and visualizations"
     ],
     "challenges": "Handling large datasets efficiently, creating responsive visualizations, and ensuring data accuracy across multiple sources.",
     "github": "https://github.com/KenImade/real_estate_dashboard",

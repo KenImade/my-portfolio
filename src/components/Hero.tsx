@@ -8,7 +8,6 @@ const Hero: React.FC = () => {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center">
                     <div className="mb-8">
-                        {/* #TODO: change picture later */}
                         <img
                             src="/images/profile_picture.jpeg"
                             alt="Kenneth Imade"

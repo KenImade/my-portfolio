@@ -5,6 +5,7 @@ import Card from '../components/Card';
 import SEOHead from '../components/SEOHead';
 
 const Projects: React.FC = () => {
+    // Possible project status = ["Completed", "In Progress", "Learning", "Planning"]
     return (
         <div className='min-h-screen py-12'>
             <SEOHead
