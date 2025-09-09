@@ -19,7 +19,7 @@ const ContactInfoCard = () => (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Get In Touch</h2>
         <div className="space-y-6">
-            <InfoItem icon={<Mail className="h-6 w-6 text-blue-600" />} label="Email" value="kenneth.imade@yahoo.com" />
+            <InfoItem icon={<Mail className="h-6 w-6 text-blue-600" />} label="Email" value="kenimade91@gmail.com" />
             {/* <InfoItem icon={<Phone className="h-6 w-6 text-blue-600" />} label="Phone" value="+1 (555) 987-6543" /> */}
             <InfoItem icon={<MapPin className="h-6 w-6 text-blue-600" />} label="Location" value="London, UK" />
         </div>

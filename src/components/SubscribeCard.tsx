@@ -17,17 +17,36 @@ const SubscribeCard: React.FC = () => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const encode = (data: Record<string, string>) =>
+        Object.keys(data)
+            .map(
+                (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+            )
+            .join("&");
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
         if (!validateEmail(email)) {
-            e.preventDefault();
             setError("Please enter a valid email address");
             return;
         }
 
-        setError("");
-        setSubmitted(true);
-        setEmail("");
-    }
+        try {
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "subscribe", email }),
+            });
+
+            setError("");
+            setSubmitted(true);
+            setEmail("");
+        } catch (err) {
+            console.error("Netlify form submission failed:", err);
+            setError("Something went wrong. Please try again.");
+        }
+    };
 
     return (
         <div className="mt-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center">
@@ -40,15 +59,26 @@ const SubscribeCard: React.FC = () => {
                 notified when I publish new posts about data analytics, backend
                 development, and my journey as a developer.
             </p>
+
             {!submitted ? (
                 <form
                     name="subscribe"
                     method="POST"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
                 >
+                    {/* Required hidden inputs */}
                     <input type="hidden" name="form-name" value="subscribe" />
+
+                    {/* Honeypot field (hidden from users) */}
+                    <p className="hidden">
+                        <label>
+                            Don’t fill this out: <input name="bot-field" />
+                        </label>
+                    </p>
+
                     <input
                         type="email"
                         name="email"
