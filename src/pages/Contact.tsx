@@ -16,8 +16,6 @@ const Contact: React.FC = () => {
         message: ''
     });
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -26,37 +24,6 @@ const Contact: React.FC = () => {
             ...formData,
             [e.target.name]: e.target.value
         });
-    };
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        try {
-            const form = e.currentTarget;
-            const data = new FormData(form);
-
-            await fetch("/", {
-                method: "POST",
-                body: data,
-            });
-
-            setIsSubmitting(false);
-            setSubmitStatus("success");
-            setFormData({
-                name: "",
-                email: "",
-                company: "",
-                subject: "",
-                message: ""
-            });
-
-            setTimeout(() => setSubmitStatus("idle"), 5000);
-        } catch (error) {
-            setIsSubmitting(false);
-            setSubmitStatus("error");
-            console.error("Error submitting form:", error);
-        }
     };
 
     return (
@@ -80,9 +47,6 @@ const Contact: React.FC = () => {
                         <ContactForm
                             formData={formData}
                             handleInputChange={handleInputChange}
-                            handleSubmit={handleSubmit}
-                            isSubmitting={isSubmitting}
-                            submitStatus={submitStatus}
                         />
                     </div>
                 </div>
